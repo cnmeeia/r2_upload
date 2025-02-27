@@ -10,6 +10,8 @@ COPY package*.json ./
 # 安装 yarn
 RUN apk add --no-cache yarn
 
+
+
 # 安装生产依赖并清理缓存
 RUN yarn install --production && \
     yarn cache clean && \
